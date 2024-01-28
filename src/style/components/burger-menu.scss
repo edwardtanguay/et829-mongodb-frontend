@@ -1,0 +1,13 @@
+@use '../utils/colors.scss' as *;
+.burger-menu {
+  display: flex;
+  gap: 5px;
+  .burger-line {
+    height: 40px;
+    width: 7.5px;
+    background-color: $DarkBlack;
+  }
+  @media screen and (width > 768px) {
+    display: none;
+  }
+}
