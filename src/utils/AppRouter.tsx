@@ -1,8 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { App } from '../App';
-import { HomePage } from '../pages/HomePage';
-import { EmployeesPage } from '../pages/EmployeesPage';
-import { CustomersPage } from '../pages/CustomersPage';
+import { LandingPage } from '../pages/LandingPage';
+import { UsersPage } from '../pages/UsersPage';
+import { BooksPage } from '../pages/BooksPage';
+import { AuthorsPage } from '../pages/AuthorsPage';
 
 export const AppRouter = createBrowserRouter([
   {
@@ -11,15 +12,19 @@ export const AppRouter = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <HomePage />,
+        element: <LandingPage />,
       },
       {
-        path: '/employees',
-        element: <EmployeesPage />,
+        path: '/books',
+        element: <BooksPage />,
       },
       {
-        path: '/customers',
-        element: <CustomersPage />,
+        path: '/users',
+        element: <UsersPage />,
+      },
+      {
+        path: '/authors',
+        element: <AuthorsPage />,
       },
     ],
   },

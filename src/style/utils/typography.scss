@@ -1,0 +1,65 @@
+@use './colors.scss' as *;
+@import url('https://fonts.cdnfonts.com/css/nunito');
+@import url('https://fonts.cdnfonts.com/css/playfair-display');
+
+$baseFont: 'Nunito', sans-serif;
+$titleFont: 'Playfair Display', sans-serif;
+
+@mixin baseFont {
+  font-family: $baseFont;
+  font-size: 2rem;
+  line-height: 1.6em;
+}
+
+@mixin link($color: $Grey) {
+  @include baseFont;
+  color: $color;
+}
+
+@mixin title {
+  font-family: $titleFont;
+  font-size: 3.6rem;
+  text-align: center;
+  line-height: 1.1em;
+}
+
+@mixin subtitle {
+  font-family: $baseFont;
+  font-size: 2.6rem;
+  line-height: 1.3em;
+}
+
+@mixin logoFont {
+  font-family: $titleFont;
+  font-size: 3.2rem;
+}
+
+h1 {
+  @include title;
+}
+
+h2 {
+  @include subtitle;
+}
+
+p {
+  @include baseFont;
+}
+
+li {
+  @include baseFont;
+}
+
+a {
+  @include link($color: $Grey);
+  transition: 350ms;
+  &:hover {
+    color: $AccentColor;
+  }
+  &:focus {
+    border-bottom: 1px solid $Black;
+  }
+  &:active {
+    outline: 1px solid $DarkBlack;
+  }
+}
