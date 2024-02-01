@@ -1,0 +1,9 @@
+.book-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: fit-content;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 20px;
+}

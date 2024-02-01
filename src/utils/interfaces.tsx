@@ -2,21 +2,16 @@ import { ObjectId } from 'mongoose';
 export interface IBook {
   _id: ObjectId;
   title: string;
-  author: {
-    id: ObjectId;
-    firstName: string;
-    lastName: string;
-  };
+  authors: string[];
   pages: number;
-  publisher: string;
-  location: string;
+  available: boolean;
 }
 
 export interface IAddress {
   street: string;
   number: string;
   city: string;
-  PLZ: string;
+  zipCode: string;
 }
 
 export interface IPerson {
@@ -27,7 +22,7 @@ export interface IPerson {
 
 export interface IUser extends IPerson {
   address: IAddress;
-  books?: IBook[];
+  mobile: number;
 }
 
 export interface IAuthor extends IPerson {
@@ -39,6 +34,4 @@ export interface IAppContext {
   setBooks: React.Dispatch<React.SetStateAction<IBook[] | undefined>>;
   users: IUser[] | undefined;
   setUsers: React.Dispatch<React.SetStateAction<IUser[] | undefined>>;
-  authors: IAuthor[] | undefined;
-  setAuthors: React.Dispatch<React.SetStateAction<IAuthor[] | undefined>>;
 }

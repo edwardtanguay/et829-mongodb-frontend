@@ -1,0 +1,17 @@
+@use '../utils/colors.scss' as *;
+.book-card {
+  width: clamp(300px, 20vw, 650px);
+  padding: 30px;
+  /* flex-grow: 0; */
+  &--available {
+    @extend .book-card;
+    border: 3px solid $LightGrey;
+  }
+
+  &--not-available {
+    @extend .book-card;
+    background-color: $DarkBlack;
+    color: $LightGrey;
+    border: 3px solid $DarkBlack;
+  }
+}

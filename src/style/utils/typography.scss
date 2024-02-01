@@ -42,6 +42,10 @@ h2 {
   @include subtitle;
 }
 
+h3 {
+  @include subtitle;
+}
+
 p {
   @include baseFont;
 }

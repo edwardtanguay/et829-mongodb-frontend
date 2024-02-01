@@ -19,9 +19,6 @@ export const Header = () => {
           <li>
             <NavLink to="/users">Users</NavLink>
           </li>
-          <li>
-            <NavLink to="/authors">Authors</NavLink>
-          </li>
         </ul>
       </nav>
       <div className="burger-menu" onClick={handleBurgerClick}>

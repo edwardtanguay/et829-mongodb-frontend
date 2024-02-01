@@ -3,7 +3,6 @@ import { App } from '../App';
 import { LandingPage } from '../pages/LandingPage';
 import { UsersPage } from '../pages/UsersPage';
 import { BooksPage } from '../pages/BooksPage';
-import { AuthorsPage } from '../pages/AuthorsPage';
 
 export const AppRouter = createBrowserRouter([
   {
@@ -21,10 +20,6 @@ export const AppRouter = createBrowserRouter([
       {
         path: '/users',
         element: <UsersPage />,
-      },
-      {
-        path: '/authors',
-        element: <AuthorsPage />,
       },
     ],
   },
