@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios';
 
 const url = 'localhost:7575';
@@ -10,7 +11,7 @@ export const FetchSingleEndpoint = async (endpoint: string) => {
     const response = await axios.get(`http://${url}/${endpoint}`);
     const data = response.data;
     return data;
-  } catch (error) {
+  } catch (error: any) {
     throw new Error(error);
   }
 };
